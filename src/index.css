@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-900 text-steel-200 font-sans antialiased;
+}
+
+::selection {
+  @apply bg-volt-500/30 text-white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ink-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ink-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-volt-700;
+}
+
+.font-display {
+  letter-spacing: -0.01em;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #4CE595 0%, #F6C453 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-10;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-xs sm:text-sm font-mono uppercase tracking-[0.18em] text-volt-400;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all duration-300 whitespace-nowrap;
+}
+
+.btn-primary {
+  @apply btn bg-volt-500 text-ink-950 shadow-glow-volt hover:bg-volt-400 hover:-translate-y-0.5;
+}
+
+.btn-ghost {
+  @apply btn border border-white/15 text-white bg-white/5 hover:bg-white/10 hover:-translate-y-0.5;
+}
+
+.card-surface {
+  @apply bg-ink-800/60 border border-white/10 rounded-3xl shadow-card;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
